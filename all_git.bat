@@ -13,7 +13,7 @@
 	IF EXIST ".git" @echo. & @echo [%%D] & @%REAL_COMMAND%
 	@cd ../ 
 	)
-goto END
+@goto END
 		
 :LOOP_IN_DIR
 @for /d %%D in (*) do @( 
@@ -24,4 +24,5 @@ goto END
 	
 :END
 @endlocal
-goto BEGIN
+@echo.
+@goto BEGIN
